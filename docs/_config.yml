@@ -1,0 +1,19 @@
+title: AI Governance & Measurement Kit
+description: >-
+  Free, framework-aligned AI governance toolkit: 34 controls mapped to NIST AI RMF,
+  ISO/IEC 42001 and the EU AI Act, a risk scoring model, and an AI tool telemetry spec.
+url: https://olgarkadieva-byte.github.io
+baseurl: /ai-governance-measurement-kit
+theme: jekyll-theme-cayman
+author: Olga A.
+lang: en
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+social:
+  name: Olga A.
+  links:
+    - https://www.linkedin.com/in/olga-arkadieva-aigp-989677112/
+    - https://github.com/olgarkadieva-byte
+    - https://olgasoffice.substack.com
+    - https://smartailayer.com

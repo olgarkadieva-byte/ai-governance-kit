@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this kit, please cite it as below."
+title: "AI Governance & Measurement Kit"
+abstract: >-
+  Framework-aligned tools for governing AI systems and proving they deliver value:
+  34 AI controls (including 8 for AI agents) mapped to the NIST AI RMF, ISO/IEC 42001
+  and the EU AI Act; a five-dimension risk scoring model; an EU AI Act tier screening guide;
+  and a platform-neutral telemetry specification for measuring AI tool adoption,
+  productivity and development payback.
+type: software
+authors:
+  - name: "Olga A."
+    website: "https://www.linkedin.com/in/olga-arkadieva-aigp-989677112/"
+version: 1.0.0
+date-released: 2026-11-16
+license: CC-BY-NC-4.0
+repository-code: "https://github.com/olgarkadieva-byte/ai-governance-measurement-kit"
+url: "https://olgarkadieva-byte.github.io/ai-governance-measurement-kit/"
+keywords:
+  - AI governance
+  - AI measurement
+  - NIST AI RMF
+  - ISO/IEC 42001
+  - EU AI Act
+  - AI agents
+  - AI risk management
+  - telemetry

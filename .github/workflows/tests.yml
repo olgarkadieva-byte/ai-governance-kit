@@ -18,7 +18,8 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - run: pip install pytest
       - run: python -m pytest -q
-      - name: Control library is in sync
+      - name: Control library and website are in sync
         run: |
           python tools/build_controls.py
-          git diff --exit-code controls/
+          python tools/build_docs.py
+          git diff --exit-code controls/ docs/

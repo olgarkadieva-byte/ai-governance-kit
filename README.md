@@ -2,6 +2,8 @@
 
 Practical, framework-aligned tools for governing AI systems **and proving they deliver value**.
 
+**Website:** [olgarkadieva-byte.github.io/ai-governance-measurement-kit](https://olgarkadieva-byte.github.io/ai-governance-measurement-kit/)
+
 This repository is the machine-readable companion to the free
 [AI Governance Starter Kit for Notion](https://smartailayer.notion.site/AI-Governance-Starter-Kit-3f0e47a9275080e480efd72a57a9442d).
 The Notion template is for teams who want to start using it in an hour. This repo is for people who want
