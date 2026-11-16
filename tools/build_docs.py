@@ -75,7 +75,7 @@ def controls_page() -> None:
         front_matter(
             "AI Control Library: 34 controls mapped to NIST AI RMF, ISO/IEC 42001 and the EU AI Act",
             "Free library of 34 AI governance controls, including 8 for AI agents, each mapped to NIST AI RMF, ISO/IEC 42001 Annex A and EU AI Act articles. Download as CSV or JSON.",
-            "/controls/",
+            "/controls.html",
         ),
         "# AI Control Library",
         "",
