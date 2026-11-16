@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aigov"
+version = "1.0.0"
+description = "AI governance and measurement kit: risk scoring, framework-mapped controls, and AI tool value metrics"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "CC-BY-NC-4.0" }
+authors = [{ name = "Olga A." }]
+keywords = ["ai-governance", "nist-ai-rmf", "iso-42001", "eu-ai-act", "ai-agents", "ai-measurement"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://smartailayer.com"
+"Notion template" = "https://smartailayer.notion.site/AI-Governance-Starter-Kit-3f0e47a9275080e480efd72a57a9442d"
+
+[tool.setuptools]
+packages = ["aigov"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

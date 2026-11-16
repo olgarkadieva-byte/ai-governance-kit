@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Meeting Notes Summarizer",
+    "purpose": "Summarize internal meeting recordings into notes and action items",
+    "department": "Operations",
+    "business_owner": "Operations Lead",
+    "deployment_stage": "Production",
+    "ai_provider": "Microsoft",
+    "data_classification": "Internal",
+    "autonomy_level": "Generative",
+    "agent_capabilities": ["Reads internal data"],
+    "user_exposure": "Internal — Organization-wide",
+    "value": {
+      "value_category": "Time saved",
+      "primary_kpi": "Time managers spend writing meeting notes",
+      "baseline": "3 hours per manager per week",
+      "target": "1 hour per manager per week",
+      "measurement_method": "Before vs after",
+      "guardrail_metric": "Fewer than 1 in 10 summaries need a correction for missing or wrong action items"
+    },
+    "risk_scores": {
+      "data_sensitivity": 2,
+      "business_impact": 1,
+      "autonomy": 2,
+      "user_exposure": 1,
+      "human_oversight": 1
+    },
+    "rationale": "Internal meeting content only, HR and legal meetings excluded. Managers check every summary before sharing, and errors are easy to correct.",
+    "expected_risk_level": "Low",
+    "eu_ai_act_tier": "Minimal risk"
+  },
+  {
+    "name": "Customer Support AI Assistant",
+    "purpose": "Answer customer questions and assist with support tickets",
+    "department": "Customer Support",
+    "business_owner": "Head of Customer Support",
+    "deployment_stage": "Pilot / Testing",
+    "ai_provider": "OpenAI",
+    "data_classification": "Confidential",
+    "autonomy_level": "Generative",
+    "agent_capabilities": ["Reads internal data", "Sends messages or emails"],
+    "user_exposure": "External — Customers",
+    "value": {
+      "value_category": "Time saved",
+      "primary_kpi": "Average ticket resolution time",
+      "baseline": "15 minutes per ticket",
+      "target": "8 minutes per ticket",
+      "measurement_method": "Control group or A/B test",
+      "guardrail_metric": "Customer satisfaction (CSAT) stays at or above 4.2/5; reopened tickets stay under 8%"
+    },
+    "risk_scores": {
+      "data_sensitivity": 4,
+      "business_impact": 3,
+      "autonomy": 2,
+      "user_exposure": 4,
+      "human_oversight": 2
+    },
+    "rationale": "Reads customer account details and answers customers directly. Agents review refunds and escalations, so autonomy is limited.",
+    "expected_risk_level": "Moderate",
+    "eu_ai_act_tier": "Transparency obligations (Art. 50)"
+  },
+  {
+    "name": "AI Resume Screening Assistant",
+    "purpose": "Rank job applications against role requirements to create a shortlist for recruiters",
+    "department": "HR",
+    "business_owner": "Head of Talent Acquisition",
+    "deployment_stage": "Proposed",
+    "ai_provider": "Other",
+    "data_classification": "Restricted / Sensitive",
+    "autonomy_level": "Decision-making",
+    "agent_capabilities": ["Reads internal data", "Creates or changes records"],
+    "user_exposure": "External — Public",
+    "value": {
+      "value_category": "Time saved",
+      "primary_kpi": "Time to create a qualified shortlist",
+      "baseline": "5 business days per role",
+      "target": "2 business days per role",
+      "measurement_method": "Sampled human review",
+      "guardrail_metric": "Shortlist pass rates stay similar across gender and age groups; recruiter override rate under 15%"
+    },
+    "risk_scores": {
+      "data_sensitivity": 5,
+      "business_impact": 5,
+      "autonomy": 4,
+      "user_exposure": 4,
+      "human_oversight": 3
+    },
+    "rationale": "Ranks real job applicants using personal data, and errors could unfairly affect people's access to jobs. Employment decisions are regulated in many places.",
+    "expected_risk_level": "Critical — Review Required",
+    "eu_ai_act_tier": "High-risk (Annex III)"
+  }
+]

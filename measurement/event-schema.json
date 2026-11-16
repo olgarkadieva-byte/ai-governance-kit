@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/olgarkadieva-byte/ai-governance-measurement-kit/measurement/event-schema.json",
+  "title": "AI tool telemetry event",
+  "description": "One event emitted by an internal AI tool. See telemetry-spec.md. Never include prompt text, document content, or other personal communications.",
+  "type": "object",
+  "required": ["event_id", "event_name", "timestamp", "tool_id", "session_id", "user_pseudo_id"],
+  "properties": {
+    "event_id": { "type": "string", "description": "Unique ID for this event (for example a UUID)." },
+    "event_name": {
+      "type": "string",
+      "enum": ["session_started", "task_submitted", "tool_invoked", "task_completed", "feedback_submitted"]
+    },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "tool_id": { "type": "string", "description": "Stable identifier of the AI tool, e.g. jira-debug-assistant." },
+    "tool_version": { "type": "string" },
+    "workflow": { "type": "string", "description": "Workflow or task category, e.g. investigate_ticket." },
+    "session_id": { "type": "string" },
+    "task_id": { "type": "string", "description": "Links task_submitted, tool_invoked, task_completed, and feedback_submitted for one task." },
+    "trace_id": { "type": "string", "description": "Optional distributed-tracing ID, for joining with system logs." },
+    "user_pseudo_id": { "type": "string", "description": "Pseudonymous, stable user ID. Not an email address or name." },
+    "team_id": { "type": "string" },
+    "org_unit": { "type": "string" },
+    "external_tool_name": { "type": "string", "description": "tool_invoked only. Name of the external tool or MCP capability called." },
+    "external_tool_status": { "type": "string", "enum": ["success", "error", "denied", "timeout"] },
+    "external_tool_latency_ms": { "type": "integer", "minimum": 0 },
+    "retry_count": { "type": "integer", "minimum": 0 },
+    "outcome": {
+      "type": "string",
+      "enum": ["success", "failed", "abandoned"],
+      "description": "task_completed only."
+    },
+    "duration_ms": { "type": "integer", "minimum": 0, "description": "task_completed only. Time from task_submitted to task_completed." },
+    "useful": { "type": "boolean", "description": "feedback_submitted only. Did the result help?" },
+    "rating": { "type": "integer", "minimum": 1, "maximum": 5 }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "event_name": { "const": "tool_invoked" } } },
+      "then": { "required": ["task_id", "external_tool_name", "external_tool_status"] }
+    },
+    {
+      "if": { "properties": { "event_name": { "const": "task_submitted" } } },
+      "then": { "required": ["task_id", "workflow"] }
+    },
+    {
+      "if": { "properties": { "event_name": { "const": "task_completed" } } },
+      "then": { "required": ["task_id", "outcome", "duration_ms"] }
+    },
+    {
+      "if": { "properties": { "event_name": { "const": "feedback_submitted" } } },
+      "then": { "required": ["task_id", "useful"] }
+    }
+  ],
+  "additionalProperties": false
+}

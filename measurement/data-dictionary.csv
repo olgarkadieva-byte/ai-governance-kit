@@ -1,0 +1,21 @@
+field,type,scope,events,required,description,privacy_note
+event_id,string,event,all,yes,Unique ID for this event,
+event_name,string,event,all,yes,"One of: session_started, task_submitted, tool_invoked, task_completed, feedback_submitted",
+timestamp,datetime,event,all,yes,When the event happened (ISO 8601),
+tool_id,string,dimension,all,yes,Stable identifier of the AI tool,
+tool_version,string,dimension,all,no,Version of the AI tool or its prompt/config,
+workflow,string,dimension,"task_submitted, task_completed",task_submitted,Task category the user asked for,
+session_id,string,dimension,all,yes,Groups events from one visit,
+task_id,string,dimension,"task_submitted, tool_invoked, task_completed, feedback_submitted",yes for task events,Links all events for one task,
+trace_id,string,dimension,all,no,Distributed tracing ID for joining with system logs,
+user_pseudo_id,string,dimension,all,yes,Pseudonymous stable user ID,Never an email address or name
+team_id,string,dimension,all,no,Team of the user,Report adoption at team level or above
+org_unit,string,dimension,all,no,Department or organization of the user,
+external_tool_name,string,dimension,tool_invoked,yes,External tool or MCP capability the AI called,
+external_tool_status,string,dimension,tool_invoked,yes,"success, error, denied, or timeout",
+external_tool_latency_ms,integer,metric,tool_invoked,no,Time the external call took,
+retry_count,integer,metric,tool_invoked,no,How many times the AI retried the call,
+outcome,string,dimension,task_completed,yes,"success, failed, or abandoned",
+duration_ms,integer,metric,task_completed,yes,Time from task submitted to task completed,
+useful,boolean,metric,feedback_submitted,yes,Whether the person said the result helped,
+rating,integer,metric,feedback_submitted,no,Optional 1-5 rating,
