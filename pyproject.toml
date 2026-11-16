@@ -7,7 +7,7 @@ name = "aigov"
 version = "1.0.0"
 description = "AI governance and measurement kit: risk scoring, framework-mapped controls, and AI tool value metrics"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 license = { text = "CC-BY-NC-4.0" }
 authors = [{ name = "Olga A." }]
 keywords = ["ai-governance", "nist-ai-rmf", "iso-42001", "eu-ai-act", "ai-agents", "ai-measurement"]

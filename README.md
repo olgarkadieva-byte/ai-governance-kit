@@ -33,7 +33,7 @@ This kit treats both as one workflow:
 
 ## Quick start
 
-Requires Python 3.9 or later. No dependencies beyond the standard library (tests use `pytest`).
+Requires Python 3.10 or later. No dependencies beyond the standard library (tests use `pytest`).
 
 ```bash
 git clone https://github.com/olgarkadieva-byte/ai-governance-measurement-kit.git
