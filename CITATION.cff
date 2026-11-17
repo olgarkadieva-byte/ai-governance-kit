@@ -9,7 +9,8 @@ abstract: >-
   productivity and development payback.
 type: software
 authors:
-  - name: "Olga A."
+  - given-names: "Olga"
+    family-names: "Arkadieva"
     website: "https://www.linkedin.com/in/olga-arkadieva-aigp-989677112/"
 version: 1.0.0
 date-released: 2026-11-16

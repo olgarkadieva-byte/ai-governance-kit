@@ -5,13 +5,13 @@ description: >-
 url: https://olgarkadieva-byte.github.io
 baseurl: /ai-governance-measurement-kit
 theme: jekyll-theme-cayman
-author: Olga A.
+author: Olga Arkadieva
 lang: en
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 social:
-  name: Olga A.
+  name: Olga Arkadieva
   links:
     - https://www.linkedin.com/in/olga-arkadieva-aigp-989677112/
     - https://github.com/olgarkadieva-byte

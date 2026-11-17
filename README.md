@@ -106,4 +106,4 @@ classifications. Adapt everything to your own operations, laws, and policies. Th
 
 [CC BY-NC 4.0](LICENSE): free to use, share, and adapt with attribution, not for commercial resale.
 
-Created by [Olga A.](https://www.linkedin.com/in/olga-arkadieva-aigp-989677112/) · [Smart AI Layer](https://smartailayer.com)
+Created by [Olga Arkadieva](https://www.linkedin.com/in/olga-arkadieva-aigp-989677112/) · [Smart AI Layer](https://smartailayer.com)

@@ -41,5 +41,5 @@ target and guardrail metric, then review it on a schedule set by its risk level.
 - [AI Governance in 2026: Why Measurement Is the Hard Part](https://olgasoffice.substack.com/p/ai-governance-in-2026-the-hardest)
 - [When Identity Is No Longer Human](https://olgasoffice.substack.com/p/when-identity-is-no-longer-human)
 
-Created by [Olga A.](https://www.linkedin.com/in/olga-arkadieva-aigp-989677112/), AIGP · [Smart AI Layer](https://smartailayer.com) ·
+Created by [Olga Arkadieva](https://www.linkedin.com/in/olga-arkadieva-aigp-989677112/), AIGP · [Smart AI Layer](https://smartailayer.com) ·
 Licensed [CC BY-NC 4.0](https://github.com/olgarkadieva-byte/ai-governance-measurement-kit/blob/main/LICENSE). Not legal advice.
