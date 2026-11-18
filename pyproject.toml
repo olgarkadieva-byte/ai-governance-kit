@@ -4,13 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "aigov"
-version = "1.0.0"
-description = "AI governance and measurement kit: risk scoring, framework-mapped controls, and AI tool value metrics"
+version = "2.0.0"
+description = "AI governance kit: framework-mapped AI controls, AI risk scoring and EU AI Act tier screening"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "CC-BY-NC-4.0" }
 authors = [{ name = "Olga Arkadieva" }]
-keywords = ["ai-governance", "nist-ai-rmf", "iso-42001", "eu-ai-act", "ai-agents", "ai-measurement"]
+keywords = ["ai-governance", "nist-ai-rmf", "iso-42001", "eu-ai-act", "ai-agents"]
 
 [project.optional-dependencies]
 test = ["pytest>=7"]

@@ -10,7 +10,7 @@ permalink: /controls.html
 
 34 practical AI governance controls, including 8 for AI agents. Each control is mapped to the **NIST AI Risk Management Framework**, **ISO/IEC 42001** Annex A, and the **EU AI Act**, with implementation and verification guidance.
 
-**Download:** [CSV](https://github.com/olgarkadieva-byte/ai-governance-measurement-kit/blob/main/controls/ai-control-library.csv) · [JSON](https://github.com/olgarkadieva-byte/ai-governance-measurement-kit/blob/main/controls/ai-control-library.json) · [Framework coverage report](https://github.com/olgarkadieva-byte/ai-governance-measurement-kit/blob/main/controls/framework-coverage.md) · [Use it in Notion](https://smartailayer.notion.site/AI-Governance-Starter-Kit-3f0e47a9275080e480efd72a57a9442d)
+**Download:** [CSV](https://github.com/olgarkadieva-byte/ai-governance-kit/blob/main/controls/ai-control-library.csv) · [JSON](https://github.com/olgarkadieva-byte/ai-governance-kit/blob/main/controls/ai-control-library.json) · [Framework coverage report](https://github.com/olgarkadieva-byte/ai-governance-kit/blob/main/controls/framework-coverage.md) · [Use it in Notion](https://smartailayer.notion.site/AI-Governance-Starter-Kit-3f0e47a9275080e480efd72a57a9442d)
 
 The mapping is indicative: it shows where a control helps, not that implementing it makes an organization compliant or certifiable.
 

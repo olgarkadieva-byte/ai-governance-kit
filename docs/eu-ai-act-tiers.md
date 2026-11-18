@@ -20,7 +20,7 @@ Work down this list and stop at the first tier that fits.
 Notes:
 
 - Most organizations are **deployers**: they use AI built by someone else. Deployer duties for high-risk systems are in Article 26: follow the provider's instructions, assign trained people to oversee the system, monitor it, and keep logs.
-- The `eu_ai_act` field in [`controls/ai-control-library.csv`](https://github.com/olgarkadieva-byte/ai-governance-measurement-kit/blob/main/controls/ai-control-library.csv) shows which articles each control helps with. Most of those articles (9 to 15, 72, 73) apply to high-risk systems.
+- The `eu_ai_act` field in [`controls/ai-control-library.csv`](https://github.com/olgarkadieva-byte/ai-governance-kit/blob/main/controls/ai-control-library.csv) shows which articles each control helps with. Most of those articles (9 to 15, 72, 73) apply to high-risk systems.
 - AI embedded in products regulated under Annex I (for example medical devices or machinery) follows a later timeline.
 - Dates reflect the Digital Omnibus on AI as adopted in 2026. Check for later changes.
 

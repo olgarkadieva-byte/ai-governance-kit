@@ -8,12 +8,6 @@ NIST = {"Govern", "Map", "Measure", "Manage"}
 RISKS = {"Data Sensitivity", "Business Impact", "Autonomy", "User Exposure", "Human Oversight"}
 
 
-def test_data_dictionary_matches_event_schema():
-    schema = json.loads((ROOT / "measurement" / "event-schema.json").read_text(encoding="utf-8"))
-    with (ROOT / "measurement" / "data-dictionary.csv").open(encoding="utf-8") as fh:
-        dictionary_fields = {row["field"] for row in csv.DictReader(fh)}
-    assert dictionary_fields == set(schema["properties"])
-
 
 def test_every_control_is_complete_and_mapped():
     controls = json.loads((ROOT / "controls" / "ai-control-library.json").read_text(encoding="utf-8"))

@@ -10,8 +10,8 @@ permalink: /risk-scoring.html
 Score each AI system on five questions, from **1 (lowest risk)** to **5 (highest risk)**.
 Score what the system can actually do and access today, not just what it is intended to do.
 
-The same rules are implemented in [`aigov/risk.py`](https://github.com/olgarkadieva-byte/ai-governance-measurement-kit/blob/main/aigov/risk.py) and tested in
-[`tests/test_risk.py`](https://github.com/olgarkadieva-byte/ai-governance-measurement-kit/blob/main/tests/test_risk.py).
+The same rules are implemented in [`aigov/risk.py`](https://github.com/olgarkadieva-byte/ai-governance-kit/blob/main/aigov/risk.py) and tested in
+[`tests/test_risk.py`](https://github.com/olgarkadieva-byte/ai-governance-kit/blob/main/tests/test_risk.py).
 
 ## 1. Data Sensitivity: what is the most sensitive data the AI can access?
 
