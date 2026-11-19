@@ -24,16 +24,27 @@ def _print_result(name: str, scores: RiskScores) -> None:
     print(f"{name}: {level.value} (average {avg_text}, review every {review_interval_months(level)} months)")
 
 
+def _score(value: str) -> int:
+    """argparse type: a whole number from 1 to 5."""
+    try:
+        n = int(value)
+    except ValueError:
+        raise argparse.ArgumentTypeError(f"must be a whole number from 1 to 5, got {value!r}")
+    if not 1 <= n <= 5:
+        raise argparse.ArgumentTypeError(f"must be from 1 to 5, got {n}")
+    return n
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="aigov", description="Score AI system risk.")
     sub = parser.add_subparsers(dest="command", required=True)
 
     one = sub.add_parser("score", help="Score a single AI system")
-    one.add_argument("--data", type=int, required=True, help="Data Sensitivity, 1-5")
-    one.add_argument("--impact", type=int, required=True, help="Business Impact, 1-5")
-    one.add_argument("--autonomy", type=int, required=True, help="Autonomy, 1-5")
-    one.add_argument("--exposure", type=int, required=True, help="User Exposure, 1-5")
-    one.add_argument("--oversight", type=int, required=True, help="Human Oversight, 1-5 (5 = least oversight)")
+    one.add_argument("--data", type=_score, required=True, help="Data Sensitivity, 1-5")
+    one.add_argument("--impact", type=_score, required=True, help="Business Impact, 1-5")
+    one.add_argument("--autonomy", type=_score, required=True, help="Autonomy, 1-5")
+    one.add_argument("--exposure", type=_score, required=True, help="User Exposure, 1-5")
+    one.add_argument("--oversight", type=_score, required=True, help="Human Oversight, 1-5 (5 = least oversight)")
 
     many = sub.add_parser("score-file", help="Score every system in a JSON file")
     many.add_argument("path", type=Path)
@@ -45,9 +56,19 @@ def main(argv: list[str] | None = None) -> int:
         _print_result("AI system", scores)
         return 0
 
-    systems = json.loads(args.path.read_text(encoding="utf-8"))
-    for system in systems:
-        _print_result(system["name"], RiskScores(**system["risk_scores"]))
+    try:
+        systems = json.loads(args.path.read_text(encoding="utf-8-sig"))
+        for system in systems:
+            _print_result(system["name"], RiskScores(**system["risk_scores"]))
+    except FileNotFoundError:
+        print(f"error: file not found: {args.path}", file=sys.stderr)
+        return 2
+    except json.JSONDecodeError as exc:
+        print(f"error: {args.path} is not valid JSON ({exc.msg}, line {exc.lineno})", file=sys.stderr)
+        return 2
+    except (KeyError, TypeError, ValueError) as exc:
+        print(f"error: {args.path}: each system needs a name and risk_scores with five scores from 1 to 5 ({exc})", file=sys.stderr)
+        return 2
     return 0
 
 
