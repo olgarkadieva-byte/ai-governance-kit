@@ -18,6 +18,7 @@ REPO = "https://github.com/olgarkadieva-byte/ai-governance-kit"
 BLOB = REPO + "/blob/main/"
 TREE = REPO + "/tree/main/"
 IMPACT_DEMO = "https://olgarkadieva-byte.github.io/ai-impact-measurement/"
+AGENTMETER_DEMO = "https://olgarkadieva-byte.github.io/agentmeter/"
 KIT = "https://smartailayer.notion.site/AI-Governance-Starter-Kit-3f0e47a9275080e480efd72a57a9442d"
 
 # Relative links in source markdown that point at other generated pages.
@@ -140,7 +141,9 @@ python -m aigov score --data 4 --impact 3 --autonomy 2 --exposure 4 --oversight 
 
 This kit answers "is this AI system safe, accountable and under control?". To answer "what did it actually change, and is it worth
 what it costs?", use the companion tool [AI Impact Measurement]({IMPACT_DEMO}): adoption, time saved, cost and ROI against a control
-group, with a keep / fix / retire verdict for every AI tool.
+group, with a keep / fix / retire verdict for every AI tool. For AI agents, [AgentMeter]({AGENTMETER_DEMO}) tests each agent
+version before release (task success, reliability, tool use, permission-policy violations, cost and latency) with a
+Ship / Hold / Block release gate for CI.
 
 ## Related reading
 

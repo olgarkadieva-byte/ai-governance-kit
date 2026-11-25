@@ -36,6 +36,11 @@ is it worth what it costs?", use the companion tool **[AI Impact Measurement](ht
 ([live demo](https://olgarkadieva-byte.github.io/ai-impact-measurement/)): adoption, time saved, cost and ROI measured against a
 control group, with a keep / fix / retire verdict for every AI tool.
 
+For AI agents, **[AgentMeter](https://github.com/olgarkadieva-byte/agentmeter)**
+([live demo](https://olgarkadieva-byte.github.io/agentmeter/)) tests each agent version before release: task success,
+reliability, tool use, permission-policy violations (including the agent controls in this kit, enforced at runtime), cost
+and latency, with a Ship / Hold / Block release gate for CI.
+
 ## Quick start
 
 Requires Python 3.10 or later. No dependencies beyond the standard library (tests use `pytest`).

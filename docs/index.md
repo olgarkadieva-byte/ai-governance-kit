@@ -30,7 +30,9 @@ python -m aigov score --data 4 --impact 3 --autonomy 2 --exposure 4 --oversight 
 
 This kit answers "is this AI system safe, accountable and under control?". To answer "what did it actually change, and is it worth
 what it costs?", use the companion tool [AI Impact Measurement](https://olgarkadieva-byte.github.io/ai-impact-measurement/): adoption, time saved, cost and ROI against a control
-group, with a keep / fix / retire verdict for every AI tool.
+group, with a keep / fix / retire verdict for every AI tool. For AI agents, [AgentMeter](https://olgarkadieva-byte.github.io/agentmeter/) tests each agent
+version before release (task success, reliability, tool use, permission-policy violations, cost and latency) with a
+Ship / Hold / Block release gate for CI.
 
 ## Related reading
 
